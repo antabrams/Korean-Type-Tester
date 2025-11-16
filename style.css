@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&display=swap');
+
+*{
+    font-family: 'Asta Sans', Courier, monospace;
+    background-color: #0f0f0f;
+}
+
+body{
+    color: white;
+}
+
+body{
+    font-size: 1.4rem;
+}
+
+h1{
+    color: rgb(255, 225, 0);
+    padding-bottom: 20px;
+}
+
+main{
+    width: 600px;
+    margin: 50px auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 6px 30px;
+}
+
+button{
+    background-color: rgb(255, 225, 0);
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover{
+    border: 3px solid white;
+}
+
+button:active{
+    color: white;
+}
+
+div#game{
+    line-height: 35px;
+    height: 105px;
+    overflow: hidden;
+    position: relative;
+}
+
+div#game:focus{
+    outline: 0;
+}
+
+#words{
+    color: rgb(84, 84, 84);
+}
+
+div.word{
+    display: inline-block;
+    margin: 0 5px;
+
+}
+
+.letter.correct{
+    color: rgb(3, 207, 0);
+}
+
+.letter.incorrect{
+    color: rgb(234, 0, 0);
+}
+
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#cursor{
+    width: 2px;
+    height: 1.6rem;
+    background-color: white;
+    position: fixed;
+    top: 219px;
+    left: 168px;
+    animation: blink 1s infinite;
+}
+
+#game {
+    overflow: visible; /* so the keyboard is not clipped */
+    position: relative;
+}
+
+
+#game:focus #cursor{
+    display: block;
+}
+
+#game.over #words{
+    opacity: .5;
+    filter: blur(0px);
+}
+
+#game.over:focus #cursor{
+    display: none;
+}
+
+#game.over #focus-error {
+    display: none;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 4px;
+}
+
+/* Generic key style */
+.keyboard div {
+    background-color: rgb(32, 32, 32);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Special width keys */
+#esc-key { width: 50px; }
+#tab-key, #capslock-key, #left-Shift-key, #right-Shift-key { width: 70px; }
+#backspace-key, #enter-key { width: 90px; }
+#space-key { width: 300px; }
+#left-control-key, #right-control-key, #windows-key, #left-alt-key, #right-alt-key, #menu-key { width: 50px; }
+
+/* Numbers and letters */
+#one-key, #two-key, #three-key, #four-key, #five-key, 
+#six-key, #seven-key, #eight-key, #nine-key, #zero-key,
+#Q-key, #W-key, #E-key, #R-key, #T-key, #Y-key, #U-key, #I-key, #O-key, #P-key,
+#A-key, #S-key, #D-key, #F-key, #G-key, #H-key, #J-key, #K-key, #L-key,
+#Z-key, #X-key, #C-key, #V-key, #B-key, #N-key, #M-key,
+#minus-key, #equals-key, #left-bracket-key, #right-bracket-key, #backslash-key,
+#semicolon-key, #quote-key, #comma-key, #period-key, #forwardslash-key {
+    width: 40px;
+}
+
+a{
+    color: white;
+    cursor: pointer;
+}
+
+
+.disclaimer {
+    background-color: rgb(37, 37, 37);
+    color: white;         
+    padding: 20px;          
+    border-radius: 10px;    
+    display: inline-block;  
+    text-align: center;     
+    box-sizing: border-box;
+    margin-top: 17%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.disclaimer p,
+.disclaimer a,
+.disclaimer button {
+    background-color: rgb(37, 37, 37);
+}
+
+.disclaimer a {
+    color: white;
+    text-decoration: underline; /* optional for link */
+    cursor: pointer;
+}
+
+.disclaimer button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 225, 0);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.disclaimer button:hover {
+    border: 3px solid white;
+}
+
+.disclaimer button:active{
+    color: white;
+}
+
+.disclaimer button{
+    width: 50%;
+}

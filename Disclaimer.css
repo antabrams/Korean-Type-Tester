@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    font-size: 1.2rem;
+}
+
+*{
+    font-family: 'Asta Sans', Courier, monospace;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+h1{
+    color: rgb(255, 225, 0);;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffea00;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
