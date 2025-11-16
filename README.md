@@ -55,3 +55,6 @@ Custom timer lengths
 Night/day theme toggle
 
 High-score saving
+
+
+# Check out the site at: https://antabrams.github.io/Korean-Type-Tester/
